@@ -44,8 +44,8 @@ def getRandomStringInvalid(i):
     printResult(valid_string, n, m, r)
     return ""
 
-def printResult(string, m, n ,r):
-    print("Test case where R is [", isValidR(n,m,r), "]: #", i)
+def printResult(string, n, m ,r):
+    print(f"Test case where R is [ {isValidR(n,m,r)} ]: # {i}")
     print("Generated values of (n,m,r) = (", n, ",", m, ",", r, ")")
     print ("see proof: ", (r), ">", "2*",n,"+", m,"+ 1" + "    [", r, ">", ((2*n) +m+1), "]")
     print("Valid string:")
