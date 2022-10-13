@@ -1,0 +1,390 @@
+There are 3 categories of tests (15 each): 
+    -ACCEPT STATES
+    -REJECT STATES (correct order, false condition)
+    -REJECT STATES (incorrect order, true condition)
+
+
+##########--ACCEPT STATES--##########
+
+Test case: # 1
+Generated values of (n,m,r) = ( 2 , 2 , 17 )
+see guard: 17 > 2*2 + 2 + 1    [17 > 7]
+
+runDPDA dpdaR "aabbbbbbbbbbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 2
+Generated values of (n,m,r) = ( 1 , 1 , 17 )
+see guard: 17 > 2*1 + 1 + 1    [17 > 4]
+
+runDPDA dpdaR "abbbbbbbbbbbbbbbbbc"
+expected output: accept
+
+
+Test case: # 3
+Generated values of (n,m,r) = ( 0 , 1 , 14 )
+see guard: 14 > 2*0 + 1 + 1    [14 > 2]
+
+runDPDA dpdaR "bbbbbbbbbbbbbbc"
+expected output: accept
+
+
+Test case: # 4
+Generated values of (n,m,r) = ( 2 , 2 , 14 )
+see guard: 14 > 2*2 + 2 + 1    [14 > 7]
+
+runDPDA dpdaR "aabbbbbbbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 5
+Generated values of (n,m,r) = ( 2 , 3 , 11 )
+see guard: 11 > 2*2 + 3 + 1    [11 > 8]
+
+runDPDA dpdaR "aabbbbbbbbbbbccc"
+expected output: accept
+
+
+Test case: # 6
+Generated values of (n,m,r) = ( 1 , 2 , 16 )
+see guard: 16 > 2*1 + 2 + 1    [16 > 5]
+
+runDPDA dpdaR "abbbbbbbbbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 7
+Generated values of (n,m,r) = ( 2 , 2 , 13 )
+see guard: 13 > 2*2 + 2 + 1    [13 > 7]
+
+runDPDA dpdaR "aabbbbbbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 8
+Generated values of (n,m,r) = ( 1 , 1 , 10 )
+see guard: 10 > 2*1 + 1 + 1    [10 > 4]
+
+runDPDA dpdaR "abbbbbbbbbbc"
+expected output: accept
+
+
+Test case: # 9
+Generated values of (n,m,r) = ( 0 , 2 , 20 )
+see guard: 20 > 2*0 + 2 + 1    [20 > 3]
+
+runDPDA dpdaR "bbbbbbbbbbbbbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 10
+Generated values of (n,m,r) = ( 0 , 2 , 9 )
+see guard: 9 > 2*0 + 2 + 1    [9 > 3]
+
+runDPDA dpdaR "bbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 11
+Generated values of (n,m,r) = ( 3 , 1 , 13 )
+see guard: 13 > 2*3 + 1 + 1    [13 > 8]
+
+runDPDA dpdaR "aaabbbbbbbbbbbbbc"
+expected output: accept
+
+
+Test case: # 12
+Generated values of (n,m,r) = ( 0 , 3 , 14 )
+see guard: 14 > 2*0 + 3 + 1    [14 > 4]
+
+runDPDA dpdaR "bbbbbbbbbbbbbbccc"
+expected output: accept
+
+
+Test case: # 13
+Generated values of (n,m,r) = ( 3 , 2 , 19 )
+see guard: 19 > 2*3 + 2 + 1    [19 > 9]
+
+runDPDA dpdaR "aaabbbbbbbbbbbbbbbbbbbcc"
+expected output: accept
+
+
+Test case: # 14
+Generated values of (n,m,r) = ( 1 , 3 , 7 )
+see guard: 7 > 2*1 + 3 + 1    [7 > 6]
+
+runDPDA dpdaR "abbbbbbbccc"
+expected output: accept
+
+
+Test case: # 15
+Generated values of (n,m,r) = ( 3 , 1 , 17 )
+see guard: 17 > 2*3 + 1 + 1    [17 > 8]
+
+runDPDA dpdaR "aaabbbbbbbbbbbbbbbbbc"
+expected output: accept
+
+
+
+
+
+
+
+
+
+
+
+
+##########--REJECT STATES (correct order, false condition)--##########
+
+Test case: # 16
+Generated values of (n,m,r) = ( 16 , 16 , 10 )
+see guard: 10 > 2*16 + 16 + 1    [10 > 49]
+
+runDPDA dpdaR "aaaaaaaaaaaaaaaabbbbbbbbbbcccccccccccccccc"
+expected output: reject
+
+
+Test case: # 17
+Generated values of (n,m,r) = ( 4 , 20 , 2 )
+see guard: 2 > 2*4 + 20 + 1    [2 > 29]
+
+runDPDA dpdaR "aaaabbcccccccccccccccccccc"
+expected output: reject
+
+
+Test case: # 18
+Generated values of (n,m,r) = ( 8 , 4 , 8 )
+see guard: 8 > 2*8 + 4 + 1    [8 > 21]
+
+runDPDA dpdaR "aaaaaaaabbbbbbbbcccc"
+expected output: reject
+
+
+Test case: # 19
+Generated values of (n,m,r) = ( 7 , 16 , 16 )
+see guard: 16 > 2*7 + 16 + 1    [16 > 31]
+
+runDPDA dpdaR "aaaaaaabbbbbbbbbbbbbbbbcccccccccccccccc"
+expected output: reject
+
+
+Test case: # 20
+Generated values of (n,m,r) = ( 7 , 11 , 15 )
+see guard: 15 > 2*7 + 11 + 1    [15 > 26]
+
+runDPDA dpdaR "aaaaaaabbbbbbbbbbbbbbbccccccccccc"
+expected output: reject
+
+
+Test case: # 21
+Generated values of (n,m,r) = ( 9 , 11 , 15 )
+see guard: 15 > 2*9 + 11 + 1    [15 > 30]
+
+runDPDA dpdaR "aaaaaaaaabbbbbbbbbbbbbbbccccccccccc"
+expected output: reject
+
+
+Test case: # 22
+Generated values of (n,m,r) = ( 9 , 9 , 10 )
+see guard: 10 > 2*9 + 9 + 1    [10 > 28]
+
+runDPDA dpdaR "aaaaaaaaabbbbbbbbbbccccccccc"
+expected output: reject
+
+
+Test case: # 23
+Generated values of (n,m,r) = ( 18 , 9 , 0 )
+see guard: 0 > 2*18 + 9 + 1    [0 > 46]
+
+runDPDA dpdaR "aaaaaaaaaaaaaaaaaaccccccccc"
+expected output: reject
+
+
+Test case: # 24
+Generated values of (n,m,r) = ( 10 , 5 , 10 )
+see guard: 10 > 2*10 + 5 + 1    [10 > 26]
+
+runDPDA dpdaR "aaaaaaaaaabbbbbbbbbbccccc"
+expected output: reject
+
+
+Test case: # 25
+Generated values of (n,m,r) = ( 11 , 20 , 20 )
+see guard: 20 > 2*11 + 20 + 1    [20 > 43]
+
+runDPDA dpdaR "aaaaaaaaaaabbbbbbbbbbbbbbbbbbbbcccccccccccccccccccc"
+expected output: reject
+
+
+Test case: # 26
+Generated values of (n,m,r) = ( 4 , 7 , 4 )
+see guard: 4 > 2*4 + 7 + 1    [4 > 16]
+
+runDPDA dpdaR "aaaabbbbccccccc"
+expected output: reject
+
+
+Test case: # 27
+Generated values of (n,m,r) = ( 12 , 10 , 0 )
+see guard: 0 > 2*12 + 10 + 1    [0 > 35]
+
+runDPDA dpdaR "aaaaaaaaaaaacccccccccc"
+expected output: reject
+
+
+Test case: # 28
+Generated values of (n,m,r) = ( 5 , 16 , 19 )
+see guard: 19 > 2*5 + 16 + 1    [19 > 27]
+
+runDPDA dpdaR "aaaaabbbbbbbbbbbbbbbbbbbcccccccccccccccc"
+expected output: reject
+
+
+Test case: # 29
+Generated values of (n,m,r) = ( 7 , 17 , 8 )
+see guard: 8 > 2*7 + 17 + 1    [8 > 32]
+
+runDPDA dpdaR "aaaaaaabbbbbbbbccccccccccccccccc"
+expected output: reject
+
+
+Test case: # 30
+Generated values of (n,m,r) = ( 4 , 14 , 2 )
+see guard: 2 > 2*4 + 14 + 1    [2 > 23]
+
+runDPDA dpdaR "aaaabbcccccccccccccc"
+expected output: reject
+
+
+
+
+
+
+
+
+
+
+
+
+##########--REJECT STATES (incorrect order, true condition)--##########
+
+Test case: # 31
+Generated values of (n,m,r) = ( 2 , 2 , 10 )
+see guard: 10 > 2*2 + 2 + 1    [10 > 7]
+
+runDPDA dpdaR "aabbccbbbbbbbb"
+expected output: reject
+
+
+Test case: # 32
+Generated values of (n,m,r) = ( 0 , 3 , 16 )
+see guard: 16 > 2*0 + 3 + 1    [16 > 4]
+
+runDPDA dpdaR "bbbcbbbbbbbbbbbbbcc"
+expected output: reject
+
+
+Test case: # 33
+Generated values of (n,m,r) = ( 1 , 3 , 20 )
+see guard: 20 > 2*1 + 3 + 1    [20 > 6]
+
+runDPDA dpdaR "abbbbbbbbcbbbbbbbbbbbbcc"
+expected output: reject
+
+
+Test case: # 34
+Generated values of (n,m,r) = ( 1 , 2 , 9 )
+see guard: 9 > 2*1 + 2 + 1    [9 > 5]
+
+runDPDA dpdaR "bbccbbbbabbb"
+expected output: reject
+
+
+Test case: # 35
+Generated values of (n,m,r) = ( 3 , 1 , 18 )
+see guard: 18 > 2*3 + 1 + 1    [18 > 8]
+
+runDPDA dpdaR "abbbbbbbbbbbbbbbbbaabc"
+expected output: reject
+
+
+Test case: # 36
+Generated values of (n,m,r) = ( 0 , 1 , 20 )
+see guard: 20 > 2*0 + 1 + 1    [20 > 2]
+
+runDPDA dpdaR "bbbbbbbbbbcbbbbbbbbbb"
+expected output: reject
+
+
+Test case: # 37
+Generated values of (n,m,r) = ( 3 , 3 , 19 )
+see guard: 19 > 2*3 + 3 + 1    [19 > 10]
+
+runDPDA dpdaR "bbbbbbbcbbbbbbbbbbbaaabcc"
+expected output: reject
+
+
+Test case: # 38
+Generated values of (n,m,r) = ( 0 , 1 , 9 )
+see guard: 9 > 2*0 + 1 + 1    [9 > 2]
+
+runDPDA dpdaR "bbbcbbbbbb"
+expected output: reject
+
+
+Test case: # 39
+Generated values of (n,m,r) = ( 0 , 2 , 17 )
+see guard: 17 > 2*0 + 2 + 1    [17 > 3]
+
+runDPDA dpdaR "cbbbbbbbbbbbbbbbbbc"
+expected output: reject
+
+
+Test case: # 40
+Generated values of (n,m,r) = ( 3 , 3 , 12 )
+see guard: 12 > 2*3 + 3 + 1    [12 > 10]
+
+runDPDA dpdaR "abbbbbbbaabbbbbccc"
+expected output: reject
+
+
+Test case: # 41
+Generated values of (n,m,r) = ( 3 , 3 , 20 )
+see guard: 20 > 2*3 + 3 + 1    [20 > 10]
+
+runDPDA dpdaR "aaabbbbbbbbccbbbbbbbbbbbbc"
+expected output: reject
+
+
+Test case: # 42
+Generated values of (n,m,r) = ( 1 , 3 , 10 )
+see guard: 10 > 2*1 + 3 + 1    [10 > 6]
+
+runDPDA dpdaR "abbccbbbbcbbbb"
+expected output: reject
+
+
+Test case: # 43
+Generated values of (n,m,r) = ( 2 , 3 , 10 )
+see guard: 10 > 2*2 + 3 + 1    [10 > 8]
+
+runDPDA dpdaR "aacccbbbbbbbbbb"
+expected output: reject
+
+
+Test case: # 44
+Generated values of (n,m,r) = ( 3 , 3 , 15 )
+see guard: 15 > 2*3 + 3 + 1    [15 > 10]
+
+runDPDA dpdaR "aaabbcccbbbbbbbbbbbbb"
+expected output: reject
+
+
+Test case: # 45
+Generated values of (n,m,r) = ( 1 , 3 , 12 )
+see guard: 12 > 2*1 + 3 + 1    [12 > 6]
+
+runDPDA dpdaR "abbbbbccbbbbbbbc"
+expected output: reject
